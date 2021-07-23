@@ -1,30 +1,29 @@
 Algoritmo "NUMEROS_REPETIDOS"
-// Disciplina  : [Linguagem e LÛgica de ProgramaÁ„o]
-// Professor   : Antonio Carlos Nicolodi
-// DescriÁ„o   : Acha a quantidade de n˙meros repetidos num vetor
-// Autor(a)    : Nome do(a) aluno(a)
-// Data atual  : 28/06/2017
+// Disciplina  : [Linguagem e L√≥gica de Programa√ß√£o]
+// Descri√ß√£o   : Acha a quantidade de n√∫meros repetidos num vetor
+// Autor(a)    : Fernanda Maresi
+// Data atual  : 23/07/2021
 Var
-   // SeÁ„o de DeclaraÁıes das vari·veis
+   // Se√ß√£o de Declara√ß√µes das vari√°veis
    vetx,VETd,VETE : vetor[1..11] de inteiro
    ELEMENTO,ACUMULA,TEMP,TAM:INTEIRO
    ELEMTEMP,KCONTAR,INDICE: inteiro
 
-FUN«√O PESQUISA(VEM: INTEIRO):LOGICO
+FUN√á√ÉO PESQUISA(VEM: INTEIRO):LOGICO
 VAR RET : LOGICO
    II  : INTEIRO
 INICIO
    RET <- FALSO
-   PARA II DE 1 AT… TAM FA«A
-      SE (VETE[II] = VEM) ENT√O
+   PARA II DE 1 AT√â TAM FA√áA
+      SE (VETE[II] = VEM) ENT√ÉO
          RET <- VERDADEIRO
       FIMSE
    FIMPARA
    RETORNE RET
-FIMFUN«√O
+FIMFUN√á√ÉO
 
 Inicio
-   // SeÁ„o de Comandos, procedimento, funÁıes, operadores, etc...
+   // Se√ß√£o de Comandos, procedimento, fun√ß√µes, operadores, etc...
    TAM <- 10
 
    VetX[1] <- 2
@@ -42,12 +41,12 @@ Inicio
    KCONTAR <- 0
    TEMP <- 1
    INDICE <- 1
-   ENQUANTO INDICE <= TAM FA«A
+   ENQUANTO INDICE <= TAM FA√áA
 
       ELEMENTO<- VETX[indice] // ELEMENTO DO VETOR
       ACUMULA <- 1
 
-      SE (N√O PESQUISA(ELEMENTO)) ENT√O
+      SE (N√ÉO PESQUISA(ELEMENTO)) ENT√ÉO
          KCONTAR <- KCONTAR + 1  // CONTADOR DE VETOR DE ELEMENTOS
          VETE[KCONTAR] <- ELEMENTO  // VETOR DE ELEMENTOS DESTACADO
          VETD[KCONTAR] <- ACUMULA  // VETOR COM A QUANTIDADE DE ELEMENTOS
@@ -55,14 +54,14 @@ Inicio
 
       TEMP <- INDICE + 1
       ELEMTEMP <- VETX[TEMP]
-//    AQUI EST¡ O SEGREDO
-      SE (ELEMENTO = ELEMTEMP) E (ELEMENTO <> 0) ENT√O
-         ENQUANTO (ELEMENTO = ELEMTEMP)  FA«A
+//    AQUI EST√Å O SEGREDO
+      SE (ELEMENTO = ELEMTEMP) E (ELEMENTO <> 0) ENT√ÉO
+         ENQUANTO (ELEMENTO = ELEMTEMP)  FA√áA
             TEMP <- TEMP + 1
             ELEMTEMP<- VETX[TEMP]
             ACUMULA <- ACUMULA + 1
          FIMENQUANTO
-      SEN√O
+      SEN√ÉO
          ACUMULA <- 1
       FIMSE
       VETD[KCONTAR] <- ACUMULA  { COM A QUANTIDADE DE ELEMENTOS}
@@ -70,8 +69,8 @@ Inicio
 
    FIMENQUANTO
 
-   PARA INDICE DE 1 AT… TAM FA«A
-      SE VETD[INDICE] <> 0 ENT√O
+   PARA INDICE DE 1 AT√â TAM FA√áA
+      SE VETD[INDICE] <> 0 ENT√ÉO
          ESCREVAL(VETE[INDICE],":",VETD[INDICE])
       FIMSE
    FIMPARA
